@@ -21,6 +21,33 @@ Route::get('/login', 'AuthController@index')->name('login');
 Route::post('/process', 'AuthController@process')->name('process');
 
 Route::get('/dashboard', 'Admin\DashboardController@index')->name('dashboard.admin');
-Route::get('/kategori', 'Admin\KategoriController@index')->name('kategori.admin');
-Route::get('/kategori/add', 'Admin\KategoriController@create')->name('kategori.add');
-Route::get('/transaksi', 'Admin\TransaksiController@index')->name('transaksi.admin');
+
+// Kategori
+Route::prefix('kategori')->group(function () {
+    Route::get('/', 'Admin\KategoriController@index')->name('kategori-index');
+    Route::get('/create', 'Admin\KategoriController@create')->name('kategori-create');
+    Route::post('/store', 'Admin\KategoriController@store')->name('kategori-store');
+    Route::get('/edit/{id}', 'Admin\KategoriController@edit')->name('kategori-edit');
+    Route::post('/update/{id}', 'Admin\KategoriController@update')->name('kategori-update');
+    Route::post('/destroy/{id}', 'Admin\KategoriController@update')->name('kategori-destroy');
+});
+
+// Buku
+Route::prefix('buku')->group(function () {
+    Route::get('/', 'Admin\BukuController@index')->name('buku-index');
+    Route::get('/create', 'Admin\BukuController@index')->name('buku-index');
+    Route::post('/store', 'Admin\BukuController@store')->name('buku-store');
+    Route::get('/edit/{id}', 'Admin\BukuController@edit')->name('buku-edit');
+    Route::post('/update/{id}', 'Admin\BukuController@update')->name('buku-update');
+    Route::post('/destroy/{id}', 'Admin\BukuController@destroy')->name('buku-destroy');
+});
+
+// Transaksi
+Route::prefix('transaksi')->group(function () {
+    Route::get('/', 'Admin\TransaksiController@index')->name('transaksi-index');
+    Route::get('/create', 'Admin\TransaksiController@index')->name('transaksi-index');
+    Route::post('/store', 'Admin\TransaksiController@store')->name('transaksi-store');
+    Route::get('/edit/{id}', 'Admin\TransaksiController@edit')->name('transaksi-edit');
+    Route::post('/update/{id}', 'Admin\TransaksiController@update')->name('transaksi-update');
+    Route::post('/destroy/{id}', 'Admin\TransaksiController@destroy')->name('transaksi-destroy');
+});
