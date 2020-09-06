@@ -14,7 +14,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
+        $data = array(
+            'title' => 'Dashboard'
+        );
+        return view('admin.dashboard', compact('data'));
     }
 
     /**
