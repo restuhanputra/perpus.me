@@ -35,7 +35,7 @@ Route::prefix('kategori')->group(function () {
 // Buku
 Route::prefix('buku')->group(function () {
     Route::get('/', 'Admin\BukuController@index')->name('buku-index');
-    Route::get('/create', 'Admin\BukuController@index')->name('buku-index');
+    Route::get('/create', 'Admin\BukuController@index')->name('buku-create');
     Route::post('/store', 'Admin\BukuController@store')->name('buku-store');
     Route::get('/edit/{id}', 'Admin\BukuController@edit')->name('buku-edit');
     Route::post('/update/{id}', 'Admin\BukuController@update')->name('buku-update');
