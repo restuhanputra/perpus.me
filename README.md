@@ -12,7 +12,7 @@
   - [Todo](#todo)
 
 ## About
-Sebuah **sistem informasi*** untuk memudahkan transaksi peminjaman buku. mempermudah staff perpustakaan dalam memanajemen baik buku, transaksi peminjaman buku, admin, dan user.
+Sebuah **sistem informasi** untuk memudahkan transaksi peminjaman buku. mempermudah staff perpustakaan dalam memanajemen baik buku, transaksi peminjaman buku, admin, dan user.
 
 ## Getting Started
 Sebelum memulai, Instruksi dibawah ini akan memberikan and cara me-*copy* *sistem informasi* dan me-*running* pada *local machine* anda baik di laptop atau PC untuk tujuan referensi atau dikembangkan.
