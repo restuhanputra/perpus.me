@@ -29,7 +29,7 @@ Route::prefix('kategori')->group(function () {
     Route::post('/store', 'Admin\KategoriController@store')->name('kategori-store');
     Route::get('/edit/{id}', 'Admin\KategoriController@edit')->name('kategori-edit');
     Route::post('/update/{id}', 'Admin\KategoriController@update')->name('kategori-update');
-    Route::post('/destroy/{id}', 'Admin\KategoriController@update')->name('kategori-destroy');
+    Route::get('/destroy/{id}', 'Admin\KategoriController@destroy')->name('kategori-destroy');
 });
 
 // Buku
@@ -39,7 +39,7 @@ Route::prefix('buku')->group(function () {
     Route::post('/store', 'Admin\BukuController@store')->name('buku-store');
     Route::get('/edit/{id}', 'Admin\BukuController@edit')->name('buku-edit');
     Route::post('/update/{id}', 'Admin\BukuController@update')->name('buku-update');
-    Route::post('/destroy/{id}', 'Admin\BukuController@destroy')->name('buku-destroy');
+    Route::get('/destroy/{id}', 'Admin\BukuController@destroy')->name('buku-destroy');
 });
 
 // Transaksi
@@ -49,5 +49,5 @@ Route::prefix('transaksi')->group(function () {
     Route::post('/store', 'Admin\TransaksiController@store')->name('transaksi-store');
     Route::get('/edit/{id}', 'Admin\TransaksiController@edit')->name('transaksi-edit');
     Route::post('/update/{id}', 'Admin\TransaksiController@update')->name('transaksi-update');
-    Route::post('/destroy/{id}', 'Admin\TransaksiController@destroy')->name('transaksi-destroy');
+    Route::get('/destroy/{id}', 'Admin\TransaksiController@destroy')->name('transaksi-destroy');
 });
