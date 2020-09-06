@@ -14,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Home');
+    return view('admin.dashboard');
 });
 
 Route::get('/login', 'AuthController@index')->name('login');
+Route::post('/process', 'AuthController@process')->name('process');
+
+Route::get('/dashboard', 'Admin\DashboardController@index')->name('dashboard.admin');
+Route::get('/kategori', 'Admin\KategoriController@index')->name('kategori.admin');
+Route::get('/dashboard', 'Admin\TransaksiController@index')->name('transaksi.admin');
