@@ -14,7 +14,10 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        //
+        $data = array(
+            'title' => 'Kategori'
+        );
+        return view('admin.kategori.index', compact('data'));
     }
 
     /**
@@ -24,7 +27,10 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        $data = array(
+            'title' => 'Tambah Kategori'
+        );
+        return view('admin.kategori.add', compact('data'));
     }
 
     /**
