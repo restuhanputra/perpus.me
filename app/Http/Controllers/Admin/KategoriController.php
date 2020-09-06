@@ -15,8 +15,10 @@ class KategoriController extends Controller
      */
     public function index()
     {
+        $kategori = Kategori::all();
         $data = array(
-            'title' => 'Kategori'
+            'title' => 'Kategori',
+            'kategori' => $kategori
         );
         return view('admin.kategori.index', compact('data'));
     }
@@ -55,10 +57,10 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    // public function show($id)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -68,7 +70,14 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kategori = Kategori::where('id', $id)->first();
+        $data = array(
+            'title'    => 'Edit Kategori',
+            'kategori' => $kategori
+        );
+        if ($id) {
+            return view('admin.kategori.edit', compact('data'));
+        }
     }
 
     /**
@@ -80,7 +89,18 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nama'   =>  'required|string|max:20|min:0',
+        ]);
+
+        $kategori = Kategori::where('id', $id)->first();
+
+        if ($kategori) {
+            $kategori->update($request->only('nama'));
+
+            return redirect()->route('kategori-index');
+        }
+        abort(403);
     }
 
     /**
@@ -91,6 +111,7 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Kategori::where('id', $id)->delete();
+        return redirect()->route('kategori-index');
     }
 }
