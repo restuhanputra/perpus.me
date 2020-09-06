@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Buku extends Model
 {
+    protected $table    = "buku";
     protected $fillable = [
-        'id_kategori', 'name', 'pengarang', 'penerbit', 'kota', 'tahun_terbit'
+        'id_kategori', 'nama', 'pengarang', 'penerbit', 'kota', 'tahun_terbit'
     ];
 }
