@@ -35,7 +35,7 @@ Route::prefix('kategori')->group(function () {
 // Buku
 Route::prefix('buku')->group(function () {
     Route::get('/', 'Admin\BukuController@index')->name('buku-index');
-    Route::get('/create', 'Admin\BukuController@index')->name('buku-create');
+    Route::get('/create', 'Admin\BukuController@create')->name('buku-create');
     Route::post('/store', 'Admin\BukuController@store')->name('buku-store');
     Route::get('/edit/{id}', 'Admin\BukuController@edit')->name('buku-edit');
     Route::post('/update/{id}', 'Admin\BukuController@update')->name('buku-update');
@@ -45,7 +45,7 @@ Route::prefix('buku')->group(function () {
 // Transaksi
 Route::prefix('transaksi')->group(function () {
     Route::get('/', 'Admin\TransaksiController@index')->name('transaksi-index');
-    Route::get('/create', 'Admin\TransaksiController@index')->name('transaksi-index');
+    Route::get('/create', 'Admin\TransaksiController@create')->name('transaksi-create');
     Route::post('/store', 'Admin\TransaksiController@store')->name('transaksi-store');
     Route::get('/edit/{id}', 'Admin\TransaksiController@edit')->name('transaksi-edit');
     Route::post('/update/{id}', 'Admin\TransaksiController@update')->name('transaksi-update');
