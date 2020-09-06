@@ -14,7 +14,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="dashboard.admin">
+        <a class="nav-link" href="/dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -28,17 +28,17 @@
     </div>
 
     <li class="nav-item">
-        <a class="nav-link" href="buku.admin">
+        <a class="nav-link" href="/kategori">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Kategori</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="buku.admin">
+        <a class="nav-link" href="/buku">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Buku</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="buku.admin">
+        <a class="nav-link" href="/transaksi">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Transaksi</span></a>
     </li>
