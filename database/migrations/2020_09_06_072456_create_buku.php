@@ -16,11 +16,11 @@ class CreateBuku extends Migration
         Schema::create('buku', function (Blueprint $table) {
             $table->id();
             $table->integer('id_kategori')->length(11)->unsigned();
-            $table->text('name', 50);
-            $table->text('pengarang', 50);
-            $table->text('penerbit', 50);
-            $table->text('kota', 20);
-            $table->text('tahun_terbit', 5);
+            $table->string('nama', 50);
+            $table->string('pengarang', 50);
+            $table->string('penerbit', 50);
+            $table->string('kota', 20);
+            $table->string('tahun_terbit', 5);
             $table->timestamps();
         });
     }
