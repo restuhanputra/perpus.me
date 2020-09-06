@@ -68,11 +68,15 @@ DB_PASSWORD=          (isi jika anda menggunakan password pada database anda)
 ```sh
 composer install
 ```
-3. *Generate Key*
+3. *Migrate database*
+```sh
+php artisan migrate
+```
+4. *Generate Key*
 ```sh
 php artisan key:generate
 ```
-4. *Finally, Running app*
+5. *Finally, Running app*
 ```sh
 php artisan serve
 ```
