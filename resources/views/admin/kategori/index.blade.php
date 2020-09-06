@@ -9,18 +9,14 @@
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <a href="{{ route('kategori-create') }}" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                        <i class="fas fa-plus"></i>
-                    </span>
-                    <span class="text">Tambah Kategori</span>
+                <a href="{{ route('kategori-create') }}" class="btn btn-primary">Tambah Kategori</span>
                 </a>
             </div>
             <!-- Card Body -->
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
                             <tr>
                                 <th>No</th>
                                 <th>Kategori</th>
@@ -28,7 +24,16 @@
                             </tr>
                         </thead>
                         <tbody>
-
+                        @foreach($data['kategori'] as $key => $data)
+                            <tr>
+                                <td>{{ $key+1}}</td>
+                                <td>{{ $data['nama'] }}</td>
+                                <td class="text-center">
+                                    <a href="{{ route('kategori-edit', $data['id']) }}" class="btn btn-info">Edit</a>
+                                    <a href="{{ route('kategori-destroy', $data ['id']) }}" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
