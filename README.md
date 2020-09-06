@@ -9,6 +9,7 @@
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
   - [Usage <a name = "usage"></a>](#usage-)
+  - [Todo <a name = "todo"></a>](#todo-)
 
 ## About <a name = "about"></a>
 Sebuah **mini *project*** untuk memudahkan transaksi peminjaman buku. mempermudah staff perpustakaan dalam memanajemen baik buku, transaksi peminjaman buku, admin, dan user.
@@ -19,7 +20,7 @@ Sebelum memulai, Instruksi dibawah ini akan memberikan and cara me-*copy* *proje
 ### Prerequisites
 Software yang harus dibutuhkan dan sudah terinstall yaitu:
 
-Windows atau MacOS (Machintosh)
+Windows
 ```
 1. Node JS
 2. Composer
@@ -46,22 +47,12 @@ Langkah demi langkah cara untuk menginstall project ini.
 2. Buka Terminal
 ```
 - Windows (Command Prompt, powershell atau GitBash)
-- Mac (terminal, iterm, dll)
 - Linux (Urxvt, Alcrity, Suckless Terminal dll)
 ```
 3. Clone project ini
-Windows, copy pada terminal misal dengan  Command Prompt
+Copy pada terminal misal dengan  Command Prompt
 ```
-git clone
-```
-Machintosh
-```
-git clone
-```
-
-Linux
-```
-git clone
+git clone https://github.com/reptr/perpus.me.git  /direktori project(htdoc)
 ```
 
 ## Usage <a name = "usage"></a>
@@ -85,3 +76,6 @@ php artisan key:generate
 ```sh
 php artisan serve
 ```
+## Todo <a name = "todo"></a>
+1. Notifikasi
+2. Konfirmasi Delete
