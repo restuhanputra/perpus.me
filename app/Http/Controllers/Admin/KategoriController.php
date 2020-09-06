@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Kategori;
 use Illuminate\Http\Request;
 
 class KategoriController extends Controller
@@ -41,7 +42,11 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama'   =>  'required|string|max:20|min:0',
+        ]);
+        Kategori::create($request->all());
+        return redirect()->route('kategori-index');
     }
 
     /**
