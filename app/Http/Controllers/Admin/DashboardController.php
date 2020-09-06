@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Buku;
 use App\Http\Controllers\Controller;
+use App\Kategori;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -14,8 +16,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $kategori = Kategori::all()->count();
+        $buku     = Buku::all()->count();
         $data = array(
-            'title' => 'Dashboard'
+            'title'          => 'Dashboard',
+            'count_kategori' => $kategori,
+            'count_buku'     => $buku
         );
         return view('admin.dashboard', compact('data'));
     }
