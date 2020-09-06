@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.dashboard');
+    return redirect('/dashboard');
 });
 
 Route::get('/login', 'AuthController@index')->name('login');
@@ -22,4 +22,5 @@ Route::post('/process', 'AuthController@process')->name('process');
 
 Route::get('/dashboard', 'Admin\DashboardController@index')->name('dashboard.admin');
 Route::get('/kategori', 'Admin\KategoriController@index')->name('kategori.admin');
-Route::get('/dashboard', 'Admin\TransaksiController@index')->name('transaksi.admin');
+Route::get('/kategori/add', 'Admin\KategoriController@create')->name('kategori.add');
+Route::get('/transaksi', 'Admin\TransaksiController@index')->name('transaksi.admin');
