@@ -4,18 +4,18 @@
 
 - [perpus.me](#perpusme)
   - [Daftar Isi](#daftar-isi)
-  - [About <a name = "about"></a>](#about-)
-  - [Getting Started <a name = "getting_started"></a>](#getting-started-)
+  - [About](#about)
+  - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
-  - [Usage <a name = "usage"></a>](#usage-)
-  - [Todo <a name = "todo"></a>](#todo-)
+  - [Usage](#usage)
+  - [Todo](#todo)
 
-## About <a name = "about"></a>
-Sebuah **mini *project*** untuk memudahkan transaksi peminjaman buku. mempermudah staff perpustakaan dalam memanajemen baik buku, transaksi peminjaman buku, admin, dan user.
+## About
+Sebuah **sistem informasi*** untuk memudahkan transaksi peminjaman buku. mempermudah staff perpustakaan dalam memanajemen baik buku, transaksi peminjaman buku, admin, dan user.
 
-## Getting Started <a name = "getting_started"></a>
-Sebelum memulai, Instruksi dibawah ini akan memberikan and cara me-*copy* *project* dan me-*running* pada *local machine* anda baik di laptop atau PC untuk tujuan referensi atau dikembangkan.
+## Getting Started
+Sebelum memulai, Instruksi dibawah ini akan memberikan and cara me-*copy* *sistem informasi* dan me-*running* pada *local machine* anda baik di laptop atau PC untuk tujuan referensi atau dikembangkan.
 
 ### Prerequisites
 Software yang harus dibutuhkan dan sudah terinstall yaitu:
@@ -55,7 +55,7 @@ Copy pada terminal misal dengan  Command Prompt
 git clone https://github.com/reptr/perpus.me.git  /direktori project(htdoc)
 ```
 
-## Usage <a name = "usage"></a>
+## Usage
 1. Pastikan sudah membuat database dengan nama **perpus.me**
 
 2. *Edit* .env
@@ -80,6 +80,6 @@ php artisan key:generate
 ```sh
 php artisan serve
 ```
-## Todo <a name = "todo"></a>
+## Todo
 1. Notifikasi
 2. Konfirmasi Delete
