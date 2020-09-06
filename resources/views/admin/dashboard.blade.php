@@ -1,4 +1,7 @@
 @extends('layout.wrapper')
+@section('title')
+    {{ $data['title'] }}
+@endsection
 @section('content')
 <!-- Content Row -->
 <div class="row">
