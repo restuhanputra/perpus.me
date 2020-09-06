@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Buku;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,12 @@ class BukuController extends Controller
      */
     public function index()
     {
-        //
+        $buku = Buku::all();
+        $data = array(
+            'title' => 'Buku',
+            'buku' => $buku
+        );
+        return view('admin.buku.index', compact('data'));
     }
 
     /**
@@ -24,7 +30,10 @@ class BukuController extends Controller
      */
     public function create()
     {
-        //
+        $data = array(
+            'title' => 'Tambah Buku'
+        );
+        return view('admin.buku.add', compact('data'));
     }
 
     /**
@@ -35,7 +44,17 @@ class BukuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'id_kategori' =>  'required|integer',
+            'name' =>  'required|string|max:50|min:0',
+            'pengarang' =>  'required|string|max:50|min:0',
+            'penerbit' =>  'required|string|max:50|min:0',
+            'kota' =>  'required|string|max:20|min:0',
+            'tahun_terbit' =>  'required|integer|max:5|min:0',
+        ]);
+
+        Buku::create($request->all());
+        return redirect()->route('buku-index');
     }
 
     /**
