@@ -9,11 +9,7 @@
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <a href="/kategori" class="btn btn-warning btn-icon-split">
-                    <span class="icon text-white-50">
-                        <i class="fas fa-plus"></i>
-                    </span>
-                    <span class="text">Kembali</span>
+                <a href="/kategori" class="btn btn-warning">Kembali</span>
                 </a>
             </div>
             <!-- Card Body -->
@@ -24,7 +20,12 @@
                     <div class="form-group row">
                         <label class="col-sm-3">Nama Kategori</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" name="nama" placeholder="Nama Kategori">
+                            <input type="text" class="form-control {{ $errors->has('nama') ? 'is-invalid' : '' }}" name="nama" placeholder="Nama Kategori">
+                            @if ($errors->has('nama'))
+                                <div class="text-danger">
+                                    <p>{{ $errors->first('nama')}}</p>
+                                </div>
+                            @endif
                         </div>
                     </div>
 
