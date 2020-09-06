@@ -16,7 +16,7 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered">
-                        <thead class="thead-dark">
+                        <thead class="text-center">
                             <tr>
                                 <th>No</th>
                                 <th>Kategori</th>
